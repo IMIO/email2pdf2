@@ -62,6 +62,7 @@ WKHTMLTOPDF_ERRORS_IGNORE = frozenset(
         r"Exit with code 1 due to network error: UnknownContentError",
         r"libpng warning: iCCP: known incorrect sRGB profile",
         r"libpng warning: iCCP: cHRM chunk does not match sRGB",
+        r"libpng warning: iCCP: profile 'ICC Profile': 1000000h: invalid rendering intent",
     ]
 )
 
