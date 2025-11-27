@@ -506,12 +506,14 @@ def can_url_fetch(src):
     try:
         encoded_src = src.replace(" ", "%20")
         req = Request(encoded_src)
-        urlopen(req, timeout=10)  # Reduced timeout to avoid long try on broken external link
+        urlopen(req, timeout=15)  # Reduced timeout to avoid long try on broken external link
     except HTTPError:
         return False
     except URLError:
         return False
     except ValueError:
+        return False
+    except TimeoutError:
         return False
     else:
         return True
