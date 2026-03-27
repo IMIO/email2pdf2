@@ -499,7 +499,11 @@ def remove_invalid_urls(payload):
             else:
                 logger.debug("Ignoring URL " + src)
 
-    return str(soup)
+    try:
+        return str(soup)
+    except RecursionError:
+        logger.warning("RecursionError while serializing HTML (deeply nested elements), skipping URL validation.")
+        return payload
 
 
 def can_url_fetch(src):
