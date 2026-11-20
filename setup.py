@@ -10,6 +10,12 @@ setup(
     license='MIT',
     author='Andrew Ferrier',
     description='email2pdf2 is a Python script to convert emails to PDF.',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+    ],
     install_requires=[
         'beautifulsoup4>=4.6.3',
         'chardet',
